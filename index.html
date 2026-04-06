@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>신입사원 사회생활 비타민 가이드북</title>
+    <style>
+        /* [1. 목차 점선 및 페이지 우측 정렬 디자인] */
+        .toc-list { list-style: none; padding: 0; margin-top: 20px; }
+        .toc-list li { margin-bottom: 10px; }
+        .toc-list a { 
+            display: flex; align-items: flex-end; 
+            text-decoration: none; color: #333; font-size: 16px; 
+        }
+        .toc-list .name { flex-shrink: 0; }
+        .toc-list .dots { 
+            flex-grow: 1; border-bottom: 1px dotted #bbb; 
+            margin: 0 10px 4px 10px; 
+        }
+        .toc-list .page-val { font-weight: bold; min-width: 25px; text-align: right; }
+
+        /* [2. 표지 디자인 - 선생님이 선택하신 스타일] */
+        .cover {
+            display: flex; flex-direction: column; justify-content: center;
+            align-items: center; text-align: center; background: white;
+            border: 10px double #4a90e2; box-sizing: border-box;
+        }
+        .cover .icon { font-size: 80px; margin-bottom: 10px; }
+        .cover h1 { font-size: 50px; color: #2c3e50; margin-bottom: 15px; word-break: keep-all; line-height: 1.2; }
+        .cover .subtitle { font-size: 20px; color: #4a90e2; font-weight: bold; margin-bottom: 40px; }
+        .cover .school { font-size: 18px; color: #777; margin-top: 60px; }
+
+        .page { page-break-after: always; }
+        #loading-status { position: fixed; top: 0; left: 0; width: 0%; height: 5px; background: #4a90e2; z-index: 9999; transition: width 0.3s; }
+    </style>
+</head>
+<body>
+    <div id="loading-status"></div>
+
+    <div class="page cover">
+        <div class="icon">💊</div>
+        <h1>신입사원<br>사회생활 비타민</h1>
+        <p class="subtitle">사회로 첫발을 내딛는 제자들을 위한 다정한 안내서</p>
+        <div class="school">담임 김애경t</div>
+    </div>
+
+    <div class="page">
+        <header><h1>목차 (Contents) 1/3</h1></header>
+        <ul class="toc-list">
+            <li><a href="#topic01"><span class="name">Topic 01. 지각 상황 대응법</span><span class="dots"></span><span class="page-val">1</span></a></li>
+            <li><a href="#topic02"><span class="name">Topic 02. 업무 지시가 이해 안 갈 때</span><span class="dots"></span><span class="page-val">2</span></a></li>
+            <li><a href="#topic03"><span class="name">Topic 03. 사내 메신저 첫인사</span><span class="dots"></span><span class="page-val">3</span></a></li>
+            <li><a href="#topic04"><span class="name">Topic 04. 업무 완료 보고</span><span class="dots"></span><span class="page-val">4</span></a></li>
+            <li><a href="#topic05"><span class="name">Topic 05. 전화 응대와 메모 전달</span><span class="dots"></span><span class="page-val">5</span></a></li>
+            <li><a href="#topic06"><span class="name">Topic 06. 출근 직후 업무 확인</span><span class="dots"></span><span class="page-val">6</span></a></li>
+            <li><a href="#topic07"><span class="name">Topic 07. 바빠 보이는 사수에게 질문할 때</span><span class="dots"></span><span class="page-val">7</span></a></li>
+            <li><a href="#topic08"><span class="name">Topic 08. 포스트잇 활용 질문법</span><span class="dots"></span><span class="page-val">8</span></a></li>
+            <li><a href="#topic09"><span class="name">Topic 09. 리뷰를 대하는 태도</span><span class="dots"></span><span class="page-val">9</span></a></li>
+            <li><a href="#topic10"><span class="name">Topic 10. 공격적인 리뷰 대처</span><span class="dots"></span><span class="page-val">10</span></a></li>
+            <li><a href="#topic11"><span class="name">Topic 11. 점심시간 및 휴식 매너</span><span class="dots"></span><span class="page-val">11</span></a></li>
+            <li><a href="#topic12"><span class="name">Topic 12. 실수를 저질렀을 때</span><span class="dots"></span><span class="page-val">12</span></a></li>
+            <li><a href="#topic13"><span class="name">Topic 13. 피드백을 받았을 때</span><span class="dots"></span><span class="page-val">13</span></a></li>
+            <li><a href="#topic14"><span class="name">Topic 14. 사회생활 스트레스 관리</span><span class="dots"></span><span class="page-val">14</span></a></li>
+            <li><a href="#topic15"><span class="name">Topic 15. 일과 중 현명한 휴식</span><span class="dots"></span><span class="page-val">15</span></a></li>
+            <li><a href="#topic16"><span class="name">Topic 16. 회의 및 미팅 매너</span><span class="dots"></span><span class="page-val">16</span></a></li>
+            <li><a href="#topic17"><span class="name">Topic 17. 모르는 용어와 약어 정리</span><span class="dots"></span><span class="page-val">17</span></a></li>
+            <li><a href="#topic18"><span class="name">Topic 18. 센스 있는 퇴근 매너</span><span class="dots"></span><span class="page-val">18</span></a></li>
+        </ul>
+        <div class="footer"><span>서울로봇고등학교</span><span>김애경t</span></div>
+    </div>
+
+    <div class="page">
+        <header><h1>목차 (Contents) 2/3</h1></header>
+        <ul class="toc-list">
+            <li><a href="#topic19"><span class="name">Topic 19. 퇴근 직전 업무 배정</span><span class="dots"></span><span class="page-val">19</span></a></li>
+            <li><a href="#topic20"><span class="name">Topic 20. 첫 출근의 정석</span><span class="dots"></span><span class="page-val">20</span></a></li>
+            <li><a href="#topic21"><span class="name">Topic 21. 회사 표준 이메일 매너</span><span class="dots"></span><span class="page-val">21</span></a></li>
+            <li><a href="#topic22"><span class="name">Topic 22. 아침에 갑자기 아플 때</span><span class="dots"></span><span class="page-val">22</span></a></li>
+            <li><a href="#topic23"><span class="name">Topic 23. 동기와의 적절한 거리두기</span><span class="dots"></span><span class="page-val">23</span></a></li>
+            <li><a href="#topic24"><span class="name">Topic 24. 첫 일주일, 적응의 골든타임</span><span class="dots"></span><span class="page-val">24</span></a></li>
+            <li><a href="#topic25"><span class="name">Topic 25. 회식 예절의 정석</span><span class="dots"></span><span class="page-val">25</span></a></li>
+            <li><a href="#topic26"><span class="name">Topic 26. 회식 자리 퇴장의 기술</span><span class="dots"></span><span class="page-val">26</span></a></li>
+            <li><a href="#topic27"><span class="name">Topic 27. 사내 메신저의 정석</span><span class="dots"></span><span class="page-val">27</span></a></li>
+            <li><a href="#topic28"><span class="name">Topic 28. 공용 비품 및 공간 매너</span><span class="dots"></span><span class="page-val">28</span></a></li>
+            <li><a href="#topic29"><span class="name">Topic 29. 보안 및 비밀 유지 매너</span><span class="dots"></span><span class="page-val">29</span></a></li>
+            <li><a href="#topic30"><span class="name">Topic 30. 업무 기록과 인수인계</span><span class="dots"></span><span class="page-val">30</span></a></li>
+            <li><a href="#topic31"><span class="name">Topic 31. 정중한 거절의 기술</span><span class="dots"></span><span class="page-val">31</span></a></li>
+            <li><a href="#topic32"><span class="name">Topic 32. 교육 및 자습 시간의 태도</span><span class="dots"></span><span class="page-val">32</span></a></li>
+            <li><a href="#topic33"><span class="name">Topic 34. 사내 공지사항 확인 매너</span><span class="dots"></span><span class="page-val">33</span></a></li>
+            <li><a href="#topic34"><span class="name">Topic 34. 외근 및 외부 미팅 매너</span><span class="dots"></span><span class="page-val">34</span></a></li>
+            <li><a href="#topic35"><span class="name">Topic 35. 팀워크와 사내 관계 맺기</span><span class="dots"></span><span class="page-val">35</span></a></li>
+            <li><a href="#topic36"><span class="name">Topic 36. 성장을 멈추지 않는 법</span><span class="dots"></span><span class="page-val">36</span></a></li>
+        </ul>
+        <div class="footer"><span>서울로봇고등학교</span><span>김애경t</span></div>
+    </div>
+
+    <div class="page">
+        <header><h1>목차 (Contents) 3/3</h1></header>
+        <ul class="toc-list">
+            <li><a href="#topic37"><span class="name">Topic 37. 슬럼프와 번아웃 대처법</span><span class="dots"></span><span class="page-val">37</span></a></li>
+            <li><a href="#topic38"><span class="name">Topic 38. 건강 관리도 실력이다</span><span class="dots"></span><span class="page-val">38</span></a></li>
+            <li><a href="#topic39"><span class="name">Topic 39. 평판은 당신의 그림자다</span><span class="dots"></span><span class="page-val">39</span></a></li>
+            <li><a href="#topic40"><span class="name">Topic 40. 핵심을 찌르는 보고의 정석</span><span class="dots"></span><span class="page-val">40</span></a></li>
+            <li><a href="#topic41"><span class="name">Topic 41. 질문 전 '스스로 검색'의 힘</span><span class="dots"></span><span class="page-val">41</span></a></li>
+            <li><a href="#topic42"><span class="name">Topic 42. 공적인 언어와 말의 품격</span><span class="dots"></span><span class="page-val">42</span></a></li>
+            <li><a href="#topic43"><span class="name">Topic 43. 실수를 발견했을 때의 수습 요령</span><span class="dots"></span><span class="page-val">43</span></a></li>
+            <li><a href="#topic44"><span class="name">Topic 44. 업무 우선순위 정하기</span><span class="dots"></span><span class="page-val">44</span></a></li>
+            <li><a href="#topic45"><span class="name">Topic 45. 오해를 부르는 짧은 말투 교정하기</span><span class="dots"></span><span class="page-val">45</span></a></li>
+            <li><a href="#topic46"><span class="name">Topic 46. 단호하지만 부드러운 거절의 기술</span><span class="dots"></span><span class="page-val">46</span></a></li>
+            <li><a href="#topic47"><span class="name">Topic 47. 엘리베이터 매너와 찰나의 소통</span><span class="dots"></span><span class="page-val">47</span></a></li>
+            <li><a href="#topic48"><span class="name">Topic 48. 명함 교환의 정석</span><span class="dots"></span><span class="page-val">48</span></a></li>
+            <li><a href="#topic49"><span class="name">Topic 49. 첫 월급, 가치 있게 쓰는 법</span><span class="dots"></span><span class="page-val">49</span></a></li>
+            <li><a href="#topic50"><span class="name">Topic 50. 진짜 어른이 되는 경제적 독립</span><span class="dots"></span><span class="page-val">50</span></a></li>
+            <li><a href="#topic51"><span class="name">Topic 51. 무례한 장난과 괴롭힘에 대처하는 자세</span><span class="dots"></span><span class="page-val">51</span></a></li>
+            <li><a href="#topic52"><span class="name">Topic 52. 인품은 가장 낮은 곳에서 빛난다</span><span class="dots"></span><span class="page-val">52</span></a></li>
+            <li><a href="#topic53"><span class="name">Topic 53. 감사는 최고의 능력이다</span><span class="dots"></span><span class="page-val">53</span></a></li>
+            <li><a href="#topic54"><span class="name">Topic 54. 신뢰는 실력보다 힘이 세다</span><span class="dots"></span><span class="page-val">54</span></a></li>
+            <li><a href="#topic55"><span class="name">Topic 55. 회사가 신입사원에게 진짜 기대하는 태도</span><span class="dots"></span><span class="page-val">55</span></a></li>
+        <li><a href="#topic56"><span class="name">Topic 56. 실수를 발견한 순간의 대처법</span><span class="dots"></span><span class="page-val">56</span></a></li>
+        
+        </ul>
+        <div class="footer"><span>서울로봇고등학교</span><span>김애경t</span></div>
+    </div>
+
+    <div id="content-area"></div>
+
+    <script>
+        const totalTopics = 60; 
+        const contentArea = document.getElementById('content-area');
+        const loadingBar = document.getElementById('loading-status');
+
+        async function loadTopics() {
+            for (let i = 1; i <= totalTopics; i++) {
+                const topicId = i.toString().padStart(2, '0');
+                const fileName = `topic${topicId}.html`;
+                try {
+                    const response = await fetch(fileName);
+                    const htmlText = await response.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(htmlText, 'text/html');
+                    const pageContent = doc.querySelector('.page');
+                    if (pageContent) {
+                        pageContent.id = `topic${topicId}`;
+                        contentArea.appendChild(pageContent);
+                    }
+                } catch (err) { console.warn(`${fileName} 로드 실패:`, err); }
+                loadingBar.style.width = (i / totalTopics * 100) + '%';
+            }
+            setTimeout(() => { loadingBar.style.display = 'none'; }, 500);
+        }
+        window.onload = loadTopics;
+    </script>
+</body>
+</html>
